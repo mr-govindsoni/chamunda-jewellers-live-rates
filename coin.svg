@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Gold and silver coin">
+  <defs>
+    <radialGradient id="gold" cx="34%" cy="27%" r="70%">
+      <stop offset="0%" stop-color="#fff5b8"/>
+      <stop offset="42%" stop-color="#f3c45f"/>
+      <stop offset="100%" stop-color="#9b5f18"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff4ae"/>
+      <stop offset="100%" stop-color="#b3731d"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="57" fill="#0b0804"/>
+  <circle cx="64" cy="64" r="52" fill="url(#rim)"/>
+  <circle cx="64" cy="64" r="43" fill="url(#gold)" stroke="#3d260b" stroke-width="2"/>
+  <circle cx="64" cy="64" r="34" fill="none" stroke="#6f4713" stroke-width="2" stroke-dasharray="2 6"/>
+  <path d="M43 83V45h10l11 19 11-19h10v38H73V65L64 80h-1L54 65v18H43Z" fill="#171008"/>
+  <path d="M38 94c14 8 38 8 52 0" fill="none" stroke="#fff2aa" stroke-width="4" stroke-linecap="round"/>
+</svg>

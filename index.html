@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chamunda Jewellers</title>
+    <link rel="stylesheet" href="/styles.css?v=4" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <img src="/assets/coin.svg" alt="" class="brand-mark" />
+          <div>
+            <p class="eyebrow">Live Bullion Rates</p>
+            <h1>Chamunda Jewellers</h1>
+          </div>
+        </div>
+        <button class="icon-button" id="refreshBtn" type="button" aria-label="Refresh rates">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 11a8 8 0 0 0-14.4-4.8L4 8" />
+            <path d="M4 4v4h4" />
+            <path d="M4 13a8 8 0 0 0 14.4 4.8L20 16" />
+            <path d="M20 20v-4h-4" />
+          </svg>
+        </button>
+      </header>
+
+      <main>
+        <section class="status-band">
+          <div>
+            <p id="marketStatus">Rates load ho rahe hain...</p>
+            <span id="sourceLine">Source connect ho raha hai</span>
+          </div>
+          <div class="live-pill" id="livePill">
+            <span></span>
+            LIVE
+          </div>
+        </section>
+
+        <section class="tabs" aria-label="Views">
+          <button type="button" class="tab active" data-view="live">Live Rate</button>
+          <button type="button" class="tab" data-view="jewellery">Jewellery</button>
+          <button type="button" class="tab" data-view="calculator">Calculator</button>
+        </section>
+
+        <section class="view active" id="liveView" aria-label="Live market rates">
+          <div class="quote-grid" id="internationalGrid"></div>
+
+          <div class="rate-table-shell">
+            <div class="table-head">
+              <span>PRODUCTS</span>
+              <span>LAST</span>
+              <span>CHG</span>
+            </div>
+            <div id="mcxTable" class="rate-list"></div>
+          </div>
+        </section>
+
+        <section class="view" id="jewelleryView" aria-label="Jewellery rates">
+          <div class="rate-table-shell">
+            <div class="table-head jewellery-head">
+              <span>PRODUCTS</span>
+              <span>BUY</span>
+              <span>SELL</span>
+            </div>
+            <div id="jewelleryTable" class="rate-list"></div>
+          </div>
+        </section>
+
+        <section class="view" id="calculatorView" aria-label="Gold and silver calculator">
+          <div class="calculator">
+            <label>
+              Product
+              <select id="calcProduct">
+                <option value="gold">Gold 24 Carat</option>
+                <option value="gold22">Gold 22 Carat</option>
+                <option value="gold18">Gold 18 Carat</option>
+                <option value="silver">Silver</option>
+              </select>
+            </label>
+            <label>
+              Weight
+              <input id="calcWeight" type="number" min="0" step="0.01" value="10" />
+            </label>
+            <label>
+              Unit
+              <select id="calcUnit">
+                <option value="gram">Gram</option>
+                <option value="tola">Tola</option>
+                <option value="kg">Kg</option>
+              </select>
+            </label>
+            <div class="calc-result">
+              <span>Approx value</span>
+              <strong id="calcTotal">--</strong>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js?v=4" defer></script>
+  </body>
+</html>
