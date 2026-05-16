@@ -1,0 +1,14 @@
+{
+  "name": "chamunda-jewellers-live-rates",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chamunda Jewellers live gold and silver rates dashboard.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check public/app.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

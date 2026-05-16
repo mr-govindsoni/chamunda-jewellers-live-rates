@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: chamunda-jewellers-live-rates
+    env: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start
+    envVars:
+      - key: METAL_PRICE_API_KEY
+        sync: false
